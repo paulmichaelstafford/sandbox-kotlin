@@ -1,10 +1,10 @@
 package chapter01
 
-class Test {
+class NullableContent {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            val t = Test()
+            val t = NullableContent()
             t.sayHello()
         }
     }
