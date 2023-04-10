@@ -19,6 +19,17 @@ class Test {
             val middleNameLength = p.middle.length
             println(middleNameLength)
         }
+        val testy = p.middle?.length ?: boom()
+        println(testy)
+
+        val boom1 = p as? String
+        println(boom1?.length ?: "what's going onnn")
+        val boom2 = p as? Person
+        println(boom2?.first ?: "what's going onnn")
+    }
+
+    fun boom(): Int {
+        return -2
     }
 
     class Person(val first: String,
