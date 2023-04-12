@@ -20,6 +20,7 @@ class Inline {
         println(extendString("test", 7))
         boomtest()
         testyMcTestFact()
+        inlineTest()
     }
 
     fun sum(vararg nums: Int): Int {
@@ -70,4 +71,20 @@ class Inline {
     fun testyMcLambdaFace(boom: (String,Int) -> String, testyString: String, testInt: Int): String {
         return boom(testyString, testInt)
     }
+
+
+    fun inlineTest() {
+       var bvoom = sumWithTrace(1,2,3)
+        println(bvoom)
+
+        val boom : (String) -> String = { it }
+        println(boom)
+        println(boom("as"))
+    }
+
+    fun sumWithTrace(vararg nums: Int) =
+            nums.fold(0) { acc, n ->
+                println("acc = $acc, n = $n")
+                acc + n
+            }
 }
