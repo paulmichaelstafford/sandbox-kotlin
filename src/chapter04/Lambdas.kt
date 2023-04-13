@@ -1,8 +1,8 @@
-class Inline {
+class Lambdas {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            val t = Inline()
+            val t = Lambdas()
             t.sayHello()
         }
     }
